@@ -1,0 +1,37 @@
+<hr />
+<h1>Desde el HTML de character component</h1>
+<h2>{{ name }}</h2>
+
+<dl>
+  <dt>Name:</dt>
+  <dd>{{ name }}</dd>
+
+  <dt>Age:</dt>
+  <dd>{{ age }} years</dd>
+
+  <dt>Method:</dt>
+  <dd>{{ characterDescription() }}</dd>
+
+  <dt>Capitalized:</dt>
+  <dd>{{ capitalizedName }}</dd>
+</dl>
+
+<button
+  *ngIf="name !== 'Adrian Fahrenheit Tepes'"
+  class="btn btn-primary rounded mx-2"
+  (click)="changeCharacterName()"
+>
+  Change name
+</button>
+
+<button class="btn btn-danger rounded" (click)="resetCharacter()">
+  Reset Character
+</button>
+
+<button
+  *ngIf="age !== 300"
+  class="btn btn-primary rounded mx-2"
+  (click)="changeCharacterAge()"
+>
+  Change age
+</button>

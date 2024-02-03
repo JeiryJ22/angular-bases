@@ -1,0 +1,18 @@
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Times New Roman';
+}
+
+dl {
+  font-family: 'Times New Roman', serif;
+}
+
+dt {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+dd {
+  font-size: 1.3rem;
+}

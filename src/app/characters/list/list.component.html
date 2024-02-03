@@ -1,0 +1,26 @@
+<hr />
+<h1>Desde el HTML de List Component</h1>
+<h2>Character List</h2>
+
+<div *ngIf="deletedCharacter; else nothingDeletedYet">
+  <h3>Last Character Deleted: <small class="text-danger">{{deletedCharacter}}</small></h3>
+</div>
+
+<ng-template #nothingDeletedYet> <!--Es como tener un div que no existe, toma la referencia local de arriba-->
+  <h3 >No Characters Deleted Yet</h3>
+</ng-template>
+
+
+<button
+  *ngIf="charactersNames.length > 0"
+  class="btn btn-danger"
+  (click)="deleteCharacter()"
+  >
+  Delete Character
+</button>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let character of charactersNames" class="list-group-item">
+    {{ character }}
+  </li>
+</ul>
